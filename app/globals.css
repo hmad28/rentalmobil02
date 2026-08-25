@@ -40,10 +40,10 @@
   .review-grid{display:grid;grid-template-columns:1fr;overflow:visible}
   .review{min-width:0}
 }
-.logo{width:78px;height:70px;display:flex;align-items:center;justify-content:center}
+.logo{width:108px;height:82px;display:flex;align-items:center;justify-content:center}
 .logo img{width:100%;height:100%;object-fit:contain}
-.footer-grid .logo{width:108px;height:98px;margin-bottom:8px}
-@media(max-width:780px){.logo{width:58px;height:54px}.footer-grid .logo{width:96px;height:86px}}
+.footer-grid .logo{width:142px;height:122px;margin-bottom:8px}
+@media(max-width:780px){.logo{width:82px;height:66px}.footer-grid .logo{width:124px;height:106px}}
 .faq-item{border-bottom:1px solid #e1dbd1}
 .faq-question{width:100%;min-height:69px;padding:0;border:0;background:transparent;color:var(--ink);display:flex;align-items:center;justify-content:space-between;gap:15px;text-align:left;font:700 15px var(--font-display)}
 .faq-question svg{width:18px;color:#a27419;transition:transform .25s ease;flex:0 0 auto}
