@@ -14,8 +14,7 @@ const generalWa = whatsappLink("Halo Yaya Trans, saya ingin bertanya tentang lay
 function Logo() {
   return (
     <a className="logo" href="#beranda" aria-label="Yaya Trans beranda">
-      <span className="logo-mark"><CarFront size={26} strokeWidth={1.8} /></span>
-      <span><b>YAYA TRANS</b><small>TOUR & TRAVEL</small></span>
+      <Image src="/images/logo-yaya-trans.png" alt="Yaya Trans Rent Car, Tour & Travel" width={512} height={512} priority />
     </a>
   );
 }
@@ -83,6 +82,7 @@ function FleetCard({ car }: { car: typeof fleet[number] }) {
 
 export default function Home() {
   const [filter, setFilter] = useState("Semua Armada");
+  const [openFaq, setOpenFaq] = useState<number | null>(0);
   const filteredFleet = filter === "Semua Armada" ? fleet : fleet.filter(car => car.category.includes(filter));
   return (
     <main>
@@ -127,7 +127,7 @@ export default function Home() {
           <div className="review-grid">{[["Pelayanan ramah, respons admin cepat, dan mobil terasa bersih selama perjalanan keluarga.","Rina W.","Wisata keluarga"],["Driver komunikatif dan sangat membantu selama rute perjalanan luar kota.","Andi P.","Perjalanan bisnis"],["Proses konsultasi mudah dan informasi harga disampaikan dengan jelas sejak awal.","Dewi L.","Antar-jemput"]].map(([quote,name,type]) => <article className="review" key={name}><div className="stars">★★★★★</div><p>“{quote}”</p><div><span>{name.charAt(0)}</span><b>{name}<small>{type} • contoh testimoni</small></b></div></article>)}</div>
         </div></div></section>
 
-      <section className="section faq" id="faq"><div className="container faq-grid"><div><span className="mini-title">INFORMASI SEWA</span><h2>Pertanyaan yang Sering Ditanyakan</h2><p>Belum menemukan jawaban yang Anda butuhkan? Tim kami siap membantu melalui WhatsApp.</p><a className="btn btn-dark" href={generalWa} target="_blank"><MessageCircle /> Tanya Admin</a></div><div className="accordion">{faqs.map(([q,a], index) => <details key={q} open={index === 0}><summary>{q}<ChevronDown /></summary><p>{a}</p></details>)}</div></div></section>
+      <section className="section faq" id="faq"><div className="container faq-grid"><div><span className="mini-title">INFORMASI SEWA</span><h2>Pertanyaan yang Sering Ditanyakan</h2><p>Belum menemukan jawaban yang Anda butuhkan? Tim kami siap membantu melalui WhatsApp.</p><a className="btn btn-dark" href={generalWa} target="_blank"><MessageCircle /> Tanya Admin</a></div><div className="accordion">{faqs.map(([q,a], index) => <div className={`faq-item ${openFaq === index ? "open" : ""}`} key={q}><button className="faq-question" type="button" aria-expanded={openFaq === index} aria-controls={`faq-answer-${index}`} onClick={() => setOpenFaq(openFaq === index ? null : index)}>{q}<ChevronDown /></button><div className="faq-answer" id={`faq-answer-${index}`} hidden={openFaq !== index}><p>{a}</p></div></div>)}</div></div></section>
 
       <section className="final-cta"><div className="container"><div className="cta-copy"><span>Rencanakan perjalanan Anda</span><h2>Siap Memulai Perjalanan Bersama Yaya Trans?</h2><p>Hubungi kami sekarang dan dapatkan rekomendasi kendaraan terbaik untuk perjalanan Anda.</p><div><a className="btn btn-gold" href={generalWa} target="_blank"><MessageCircle /> Hubungi Kami Sekarang</a><a className="btn btn-ghost" href="#armada">Lihat Armada</a></div></div></div></section>
 

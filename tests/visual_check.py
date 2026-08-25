@@ -11,7 +11,7 @@ with sync_playwright() as p:
         page = browser.new_page(viewport={"width": width, "height": height})
         errors = []
         page.on("console", lambda msg: errors.append(msg.text) if msg.type == "error" else None)
-        page.goto("http://127.0.0.1:3127", wait_until="networkidle")
+        page.goto("http://127.0.0.1:3147", wait_until="networkidle")
         page.screenshot(path=str(shots / f"{name}.png"), full_page=True)
         overflow = page.evaluate("document.documentElement.scrollWidth > document.documentElement.clientWidth")
         h1 = page.locator("h1").count()
@@ -19,10 +19,13 @@ with sync_playwright() as p:
         if name == "desktop":
             page.get_by_role("button", name="City Car").click()
             filtered = page.locator(".fleet-card").count()
-            print(f"{name}: h1={h1}, fleet={cards}, filtered={filtered}, overflow={overflow}, console_errors={len(errors)}")
+            page.locator(".faq-question").nth(1).click()
+            expanded = page.locator('.faq-question[aria-expanded="true"]').count()
+            print(f"{name}: h1={h1}, fleet={cards}, filtered={filtered}, faq_expanded={expanded}, overflow={overflow}, console_errors={len(errors)}")
         else:
             page.get_by_role("button", name="Buka navigasi").click()
             menu_visible = page.locator("nav.open").is_visible()
-            print(f"{name}: h1={h1}, fleet={cards}, menu={menu_visible}, overflow={overflow}, console_errors={len(errors)}")
+            horizontal_sections = page.locator(".service-grid, .fleet-grid, .route-grid, .review-grid").evaluate_all("els => els.filter(el => el.scrollWidth > el.clientWidth + 1).length")
+            print(f"{name}: h1={h1}, fleet={cards}, menu={menu_visible}, horizontal_sections={horizontal_sections}, overflow={overflow}, console_errors={len(errors)}")
         page.close()
     browser.close()
