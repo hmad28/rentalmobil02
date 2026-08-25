@@ -120,7 +120,7 @@ Implementasi telah diperiksa pada viewport desktop `1440 × 1000` dan mobile `39
 
 ## Catatan Aset
 
-Ilustrasi kendaraan disimpan secara lokal di `public/cars`. Beberapa foto perjalanan menggunakan gambar eksternal dari Unsplash dan membutuhkan koneksi internet. Untuk penggunaan produksi, gantikan foto tersebut dengan dokumentasi resmi Yaya Trans yang telah dioptimalkan.
+Foto katalog kendaraan hasil generate disimpan secara lokal dalam format WebP transparan di `public/cars`. Beberapa foto perjalanan menggunakan gambar eksternal dari Unsplash dan membutuhkan koneksi internet. Untuk penggunaan produksi, aset armada tetap perlu dicocokkan dengan unit asli Yaya Trans, sedangkan foto perjalanan sebaiknya diganti dengan dokumentasi resmi yang telah dioptimalkan.
 
 ## Deployment
 

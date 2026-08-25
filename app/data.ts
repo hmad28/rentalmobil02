@@ -9,10 +9,10 @@ export const services = [
 ];
 
 export const fleet = [
-  { name: "All New Brio", category: "City Car", seats: 4, transmission: "Manual / Matic", price: "Rp 250.000", image: "/cars/brio.svg" },
-  { name: "Toyota Avanza", category: "MPV", seats: 7, transmission: "Manual / Matic", price: "Rp 300.000", image: "/cars/avanza.svg" },
-  { name: "Innova Reborn", category: "MPV Premium", seats: 7, transmission: "Manual / Matic", price: "Rp 500.000", image: "/cars/innova.svg" },
-  { name: "Toyota Hiace", category: "Minibus", seats: 14, transmission: "Manual", price: "Hubungi kami", image: "/cars/hiace.svg" },
+  { name: "All New Brio", category: "City Car", seats: 4, transmission: "Manual / Matic", price: "Rp 250.000", image: "/cars/brio-generated.webp" },
+  { name: "Toyota Avanza", category: "MPV", seats: 7, transmission: "Manual / Matic", price: "Rp 300.000", image: "/cars/avanza-generated.webp" },
+  { name: "Innova Reborn", category: "MPV Premium", seats: 7, transmission: "Manual / Matic", price: "Rp 500.000", image: "/cars/innova-generated.webp" },
+  { name: "Toyota Hiace", category: "Minibus", seats: 14, transmission: "Manual", price: "Hubungi kami", image: "/cars/hiace-generated.webp" },
 ];
 
 export const routes = [
