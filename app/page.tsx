@@ -97,7 +97,6 @@ export default function Home() {
             <div className="hero-actions"><a className="btn btn-gold" href={generalWa} target="_blank">Cek Mobil Tersedia <ArrowRight size={18} /></a><a className="btn btn-ghost" href="#armada">Lihat Armada</a></div>
             <div className="trust-row"><span><Star /> Rating Draft 5.0</span><span><ShieldCheck /> Armada Terawat</span><span><Zap /> Respons Cepat</span></div>
           </div>
-          <div className="hero-car" aria-hidden="true"><div className="car-glow" /><Image src="/cars/innova.svg" alt="" fill priority sizes="(max-width: 800px) 90vw, 55vw" /></div>
         </div>
       </section>
       <div className="booking-wrap"><BookingBar /></div>
@@ -130,7 +129,7 @@ export default function Home() {
 
       <section className="section faq" id="faq"><div className="container faq-grid"><div><span className="mini-title">INFORMASI SEWA</span><h2>Pertanyaan yang Sering Ditanyakan</h2><p>Belum menemukan jawaban yang Anda butuhkan? Tim kami siap membantu melalui WhatsApp.</p><a className="btn btn-dark" href={generalWa} target="_blank"><MessageCircle /> Tanya Admin</a></div><div className="accordion">{faqs.map(([q,a], index) => <details key={q} open={index === 0}><summary>{q}<ChevronDown /></summary><p>{a}</p></details>)}</div></div></section>
 
-      <section className="final-cta"><div className="container"><div className="cta-copy"><span>Rencanakan perjalanan Anda</span><h2>Siap Memulai Perjalanan Bersama Yaya Trans?</h2><p>Hubungi kami sekarang dan dapatkan rekomendasi kendaraan terbaik untuk perjalanan Anda.</p><div><a className="btn btn-gold" href={generalWa} target="_blank"><MessageCircle /> Hubungi Kami Sekarang</a><a className="btn btn-ghost" href="#armada">Lihat Armada</a></div></div><div className="cta-car"><Image src="/cars/innova.svg" alt="Toyota Innova untuk perjalanan nyaman" fill sizes="600px" /></div></div></section>
+      <section className="final-cta"><div className="container"><div className="cta-copy"><span>Rencanakan perjalanan Anda</span><h2>Siap Memulai Perjalanan Bersama Yaya Trans?</h2><p>Hubungi kami sekarang dan dapatkan rekomendasi kendaraan terbaik untuk perjalanan Anda.</p><div><a className="btn btn-gold" href={generalWa} target="_blank"><MessageCircle /> Hubungi Kami Sekarang</a><a className="btn btn-ghost" href="#armada">Lihat Armada</a></div></div></div></section>
 
       <footer><div className="container footer-grid"><div><Logo /><p>Partner rental mobil dan perjalanan Magelang–Jogja untuk wisata, keluarga, bisnis, dan rombongan.</p><div className="socials"><a href="#" aria-label="Instagram"><Instagram /></a><a href={generalWa} aria-label="WhatsApp"><MessageCircle /></a></div></div><div><h3>Kontak Kami</h3><p><Phone /> 0857-9941-4903</p><p><MapPin /> Magelang, Jawa Tengah</p><p><Clock3 /> Pelayanan setiap hari</p></div><div><h3>Navigasi</h3><a href="#beranda">Beranda</a><a href="#armada">Armada</a><a href="#layanan">Layanan</a><a href="#tentang">Tentang Kami</a></div><div><h3>Layanan Kami</h3><a href="#layanan">Lepas Kunci</a><a href="#layanan">Dengan Driver</a><a href="#rute">Antar-Jemput</a><a href="#rute">Perjalanan Luar Kota</a></div></div><div className="copyright container">© 2026 Yaya Trans Tour & Travel. All rights reserved. <span>Konten harga, rating, dan testimoni masih berupa draft.</span></div></footer>
 
