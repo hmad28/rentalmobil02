@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useEffect, useState, FormEvent } from "react";
 import {
   ArrowRight, CalendarDays, CarFront, Check, ChevronDown, Clock3, Gauge,
-  Instagram, MapPin, Menu, MessageCircle, Phone, ShieldCheck, Sparkles,
+  Instagram, MapPin, Menu, MessageCircle, Phone, ShieldCheck,
   Star, ThumbsUp, UserRound, UsersRound, X, Zap
 } from "lucide-react";
 import { faqs, fleet, routes, services, whatsappLink } from "./data";
@@ -91,7 +91,6 @@ export default function Home() {
         <div className="hero-bg" />
         <div className="hero-shell">
           <div className="hero-copy">
-            <div className="eyebrow"><Sparkles size={15} /> Rental Mobil & Tour Travel Magelang</div>
             <h1>Rental Mobil Magelang untuk <span>Perjalanan yang Lebih Nyaman</span></h1>
             <p>Lepas kunci atau dengan driver untuk wisata, bisnis, antar-jemput, dan perjalanan luar kota.</p>
             <div className="hero-actions"><a className="btn btn-gold" href={generalWa} target="_blank">Cek Mobil Tersedia <ArrowRight size={18} /></a><a className="btn btn-ghost" href="#armada">Lihat Armada</a></div>

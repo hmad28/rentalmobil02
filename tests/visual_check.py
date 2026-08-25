@@ -11,7 +11,7 @@ with sync_playwright() as p:
         page = browser.new_page(viewport={"width": width, "height": height})
         errors = []
         page.on("console", lambda msg: errors.append(msg.text) if msg.type == "error" else None)
-        page.goto("http://127.0.0.1:3147", wait_until="networkidle")
+        page.goto("http://127.0.0.1:3159", wait_until="networkidle")
         page.screenshot(path=str(shots / f"{name}.png"), full_page=True)
         overflow = page.evaluate("document.documentElement.scrollWidth > document.documentElement.clientWidth")
         h1 = page.locator("h1").count()
